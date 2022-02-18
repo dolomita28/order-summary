@@ -24,14 +24,16 @@ html {
 body {
   font-family: 'Red Hat Display', sans-serif;
   background-image: url(/images/pattern-background-desktop.svg);
+  background-size: cover;
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 .card,.card-details{
-  width: 30rem;
+  width: 32rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -41,50 +43,95 @@ body {
 }
 .card > img{
   width: 100%;
-  border-radius: 2rem;
+  border-radius: 2rem 2rem 0 0;
 }
 .card-details{
-  padding: 2rem;
+  padding: 2rem;  
+  /* height: 40rem; */
 }
 .card-details > h1{
   font-weight: 900;
+  height: 5rem;
+  align-self: center;
   color: var(--darkblue);
 }
 .card-details > p{
   font-size: 1.5rem;
+  width: 90%;
   font-weight: 500;
   text-align: center;
   color: var(--desaturatedblue);
 }
 .plan{
   background-color: var(--verypaleblue);
-  width: 100%;
+  width: 100%;  
   display: flex;
   justify-content: space-around;
   align-items: center;
   border-radius: 1rem;
+  margin:2rem 0;
+  padding: 0 2rem;
   
+}
+.plan > img{
+  margin-right: 1rem;
 }
 .plan-details{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding: 2rem 0; 
+  flex: 1;
+}
+.plan-title, .plan-price,.change{
+  font-weight: 700;  
+  font-size: 1.5rem;
 }
 .plan-title{
-  font-weight: 700;
+  color: var(--darkblue);
 }
-.plan-price{
-
+.plan-price{  
+  color: var(--desaturatedblue);  
+}
+.change{
+  color:var(--brightblue);
+}
+.change:hover{
+  text-decoration: none;
 }
 .payment{
-
+  height: 5rem;
+  width: 100%;
+  background-color: var(--brightblue);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 10px 10px 1px var(--paleblue);
+}
+.payment > a{
+  color:var(--white);
+  font-weight: 700;  
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.payment:hover{
+  background-color: var(--darkblue);
 }
 .cancel{
-
+  margin:2rem;
+  font-weight: 700;  
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--desaturatedblue);
+}
+.cancel:hover{
+  color:var(--darkblue);
 }
 .attribution {
   font-size: 11px;
   text-align: center;
+  align-self: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
